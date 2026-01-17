@@ -1,4 +1,3 @@
-# Hotel-management system -CCP
 
 # Guest House Management System
 
