@@ -1,37 +1,18 @@
 package entities;
 
 public class HowMany {
-    
 
-    private int countValue;
+    private int totalCount;
 
-   
     public HowMany() {
-        this(0); 
+        this(0);
     }
 
-
-    public HowMany(int initialNumber) {
-        this.countValue = initialNumber;
+    public HowMany(int initialValue) {
+        this.totalCount = initialValue;
     }
 
-    // Getter method
     public int getNumber() {
-        return this.countValue;
-    }
-
-   
-    public void setNumber(int newNumber) {
-        // Validation check (optional: agar sirf positive numbers chahiye hon)
-        if (newNumber >= 0) {
-            this.countValue = newNumber;
-        } else {
-            this.countValue = 0; 
-        }
-    }
-
-    @Override
-    public String toString() {
-        return "Count: " + countValue;
+        return this.totalCount;
     }
 }
