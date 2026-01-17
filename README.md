@@ -6,12 +6,12 @@ A robust and modular **Java-based application** designed to manage daily operati
 
 ---
 
-## ### Overview
+ Overview
 This system follows the **Model-View-Controller (MVC)** architectural pattern to ensure a clean separation of concerns. It allows administrators to handle multiple rooms, manage various room types (Single, Double, Suite), and process guest check-ins/check-outs efficiently.
 
 ---
 
-## ### Key Features
+ Key Features
 * **Room Management:** Add and track rooms within the guest house.
 * **Reservation System:** Create, validate, and cancel bookings using unique reservation IDs.
 * **Guest Handling:** Manage guest profiles, including their contact details and identity information.
@@ -20,7 +20,7 @@ This system follows the **Model-View-Controller (MVC)** architectural pattern to
 
 ---
 
-## ### Project Structure
+ Project Structure
 The project is organized into distinct packages for better scalability:
 
 * **main**: Contains the entry point of the application (`Main.java`).
@@ -30,7 +30,7 @@ The project is organized into distinct packages for better scalability:
 
 ---
 
-## ### Technologies & Concepts Used
+    Technologies & Concepts Used
 * **Object-Oriented Programming (OOP):** Used Inheritance (e.g., `ReserverPayer` extending `Guest`), Encapsulation, and Polymorphism.
 * **Java Collections:** For managing lists of rooms and reservations.
 * **Enums:** Used for fixed categories like `RoomKind` (SINGLE, DOUBLE, SUITE).
@@ -39,7 +39,7 @@ The project is organized into distinct packages for better scalability:
 
 ---
 
-## ### Core Components
+    Core Components
 
 | Component | Description |
 | :--- | :--- |
@@ -49,8 +49,7 @@ The project is organized into distinct packages for better scalability:
 | **RoomType** | Maps specific room categories to their respective nightly rates. |
 
 ---
-
-## ### How to Run
+     How to Run
 1.  Ensure you have **Java JDK** installed.
 2.  Maintain the folder structure according to the package names (`controller`, `entities`, `model`, `main`).
 3.  Compile and run the `Main.java` file from the `main` package.
