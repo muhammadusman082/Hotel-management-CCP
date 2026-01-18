@@ -5,7 +5,6 @@ import entities.Room;
 import entities.RoomType;
 import entities.Reservation;
 import model.*;
-
 import java.util.Date;
 
 public class Main {
@@ -24,23 +23,23 @@ public class Main {
         myGuestHouse.addRoom(r101);
         System.out.println("Status: Room 101 registered.");
 
-        Address guestLoc = new Address("Street 1", "Lahore", "54000");
-        Name guestName = new Name("Babar", "Azam");
+        Address guestLoc = new Address("Street 5", "Karachi", "75500");
+        Name guestName = new Name("Usman", "Ali"); 
         Guest primaryGuest = new Guest(guestName, guestLoc);
 
         System.out.println("Profile generated: " + guestName.toString());
 
-        Money suitePrice = new Money(12000);
-        RoomType suiteType = new RoomType(RoomKind.SUITE, suitePrice);
+        Money roomPrice = new Money(15000); 
+        RoomType roomType = new RoomType(RoomKind.DOUBLE, roomPrice); 
 
-        System.out.println("Category: " + suiteType.getKind());
-        System.out.println("Nightly Rate: " + suiteType.getCost().getAmount());
+        System.out.println("Category: " + roomType.getKind());
+        System.out.println("Nightly Rate: " + roomType.getCost().getAmount());
 
         Date today = new Date();
-        Reservation resInfo = new Reservation(today, today, today, 5001);
+        Reservation resInfo = new Reservation(today, today, today, 7001); 
 
         boolean isReserved = chainManager.makeReservation(resInfo, r101);
-        System.out.println("Booking Confirmation (ID 5001): " + isReserved);
+        System.out.println("Booking Confirmation (ID 7001): " + isReserved);
 
         chainManager.checkInGuest(primaryGuest, 101);
         System.out.println("Update: Guest entry recorded for Room 101");
@@ -51,7 +50,7 @@ public class Main {
         chainManager.checkOutGuest(101);
         System.out.println("Update: Guest departure recorded for Room 101");
 
-        boolean isRemoved = chainManager.cancelReservation(5001);
-        System.out.println("Final Status: Reservation 5001 removed -> " + isRemoved);
+        boolean isRemoved = chainManager.cancelReservation(7001);
+        System.out.println("Final Status: Reservation 7001 removed -> " + isRemoved);
     }
 }
