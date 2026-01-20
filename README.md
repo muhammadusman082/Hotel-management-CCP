@@ -1,5 +1,5 @@
 
-# Guest House Management System
+# Hotel Management System
 
 A robust and modular **Java-based application** designed to manage daily operations of a guest house, including room allocations, guest registrations, and reservation tracking.
 
